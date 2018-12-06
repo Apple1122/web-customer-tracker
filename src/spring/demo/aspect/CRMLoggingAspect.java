@@ -17,14 +17,14 @@ public class CRMLoggingAspect {
 	private Logger myLogger = Logger.getLogger(getClass().getName());
 	
 	// setup pointcut declarations
-	@Pointcut("execution(* springdemo.controller.*.*(..))")
+	@Pointcut("execution(* spring.demo.controller.*.*(..))")
 	private void forControllerPackage() {}
 	
 	// do the same for service and dao
-	@Pointcut("execution(* springdemo.service.*.*(..))")
+	@Pointcut("execution(* spring.demo.service.*.*(..))")
 	private void forServicePackage() {}
 
-	@Pointcut("execution(* springdemo.dao.*.*(..))")
+	@Pointcut("execution(* spring.demo.dao.*.*(..))")
 	private void forDaoPackage() {}
 
 	@Pointcut("forControllerPackage() || forServicePackage() || forDaoPackage()")
